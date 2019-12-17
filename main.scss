@@ -1,0 +1,40 @@
+
+$main-font: Helvetica, sans-serif
+$main-color: #254E58
+$text-bcg-color: #88BDBC
+$font-color: #47423A
+$secondary-color: #D9B595
+
+$sm: 1rem
+$md: 1.7rem
+$lg: 2.8rem
+
+@mixin shape($padding, $margin, $radius) 
+  padding: $padding
+  margin: $margin
+  border-radius: $radius
+  
+
+body 
+  background-color: $main-color !important
+  font: $main-font  !important
+  color: $font-color !important
+  
+nav
+    @include shape(10px, 10px, 5px)
+      
+header, footer
+  font: $main-font
+  background-color: $secondary-color
+  color: $font-color
+  @include shape(10px, 10px, 5px)
+  
+  
+main
+  font: $main-font
+  background-color: $text-bcg-color
+  color: $font-color
+  @include shape(10px, 10px, 5px)
+  
+
+
